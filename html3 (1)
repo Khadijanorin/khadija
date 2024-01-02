@@ -1,0 +1,175 @@
+[6:58 pm, 28/12/2023] ZoyaHafeez: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Store Manufacturers</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+        }
+
+        #menu-icon {
+            display: none;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            cursor: pointer;
+        }
+
+        nav {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 1em;
+        }
+
+        .container {
+            width: 80%;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            cursor: pointer;
+        }
+
+        .manufacturer-details {
+            display: none;
+            margin-left: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            #menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Medical Store Manufacturers</h2>
+    <div id="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h3>Manufacturers:</h3>
+    <ul>
+        <li onclick="toggleDetails('manufacturer1')">Manufacturer 1</li>
+        <div id="manufacturer1" class="manufacturer-details">
+            <p>Details about Manufacturer 1...</p>
+        </div>
+        <li onclick="toggleDetails('manufacturer2')">Manufacturer 2</li>
+        <div id="manufacturer2" class="manufacturer-details">
+            <p>Details about Manufacturer 2...</p>
+        </div>
+        <!-- Add more manufacturers as needed -->
+    </ul>
+</div>
+
+<script>
+    function toggleMenu() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('show');
+    }
+
+    function toggleDetails(manufacturerId) {
+        var details = document.getElementById(manufacturerId);
+        details.style.display = details.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
+[6:58 pm, 28/12/2023] ZoyaHafeez: Yeh manufacturer ka hai
+[6:59 pm, 28/12/2023] ZoyaHafeez: <!DOCTYPE html>
